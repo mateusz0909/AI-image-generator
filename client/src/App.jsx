@@ -2,26 +2,21 @@ import "./App.css";
 import ghIcon from "./assets/github-icon.png";
 import icon from "./assets/ai.png";
 import { useState } from "react";
-import { Configuration, OpenAIApi } from "openai";
+import axios from "axios";
+const apiURL = "http://localhost:3000/";
 
 function App() {
   const [prompt, setPrompt] = useState("");
   const [imageLoading, setImageLoading] = useState(false);
-  const configuration = new Configuration({
-    apiKey: import.meta.env.VITE_Open_AI_Key,
-  });
-  const openai = new OpenAIApi(configuration);
+
   const [result, setResult] = useState("");
   const generateImage = async (e) => {
     e.preventDefault();
     setResult("");
     setImageLoading(true);
-    const res = await openai.createImage({
-      prompt: prompt,
-      n: 1,
-      size: "256x256",
-    });
-    setResult(res.data.data[0].url);
+    const res = await axios
+      .get(`${apiURL}api/search?q=${prompt}`)
+      .then((res) => setResult(res.data.result));
     setImageLoading(false);
   };
 
@@ -61,7 +56,12 @@ function App() {
         </form>
 
         {result.length > 0 ? (
-          <img className="result-image" src={result} alt="result" />
+          <img
+            loading="lazy"
+            className="result-image"
+            src={result}
+            alt="result"
+          />
         ) : (
           <></>
         )}

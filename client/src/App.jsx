@@ -3,7 +3,7 @@ import ghIcon from "./assets/github-icon.png";
 import icon from "./assets/ai.png";
 import { useState } from "react";
 import axios from "axios";
-const apiURL = "http://localhost:3000/";
+const apiURL = "https://openai-jpd3.onrender.com/";
 
 function App() {
   const [prompt, setPrompt] = useState("");

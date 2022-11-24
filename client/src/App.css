@@ -117,6 +117,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.loader {
+  margin-top: 1em;
+}
+
 footer {
   display: flex;
   justify-content: center;

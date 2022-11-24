@@ -2,6 +2,7 @@ import "./App.css";
 import ghIcon from "./assets/github-icon.png";
 import icon from "./assets/ai.png";
 import { useState } from "react";
+import { FadingBalls } from "react-cssfx-loading";
 import axios from "axios";
 const apiURL = "https://openai-jpd3.onrender.com/";
 
@@ -53,7 +54,11 @@ function App() {
             {imageLoading ? "Image is loading..." : "Generate an image"}
           </button>
         </form>
-
+        {imageLoading ? (
+          <FadingBalls className="loader" color="#a12568" />
+        ) : (
+          <></>
+        )}
         {result.length > 0 ? (
           <img
             loading="lazy"

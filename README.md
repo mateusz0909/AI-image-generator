@@ -28,5 +28,5 @@ Simple app that allows users to generate image purely by AI. Image maker is powe
 
 ## Demo
 
-Link to [live demo](https://mateusz0909.github.io/AI-image-generator/)
+Link to [live demo](https://comforting-blancmange-56fb33.netlify.app/)
 

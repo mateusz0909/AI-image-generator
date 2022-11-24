@@ -1,7 +1,7 @@
 
 # AI Image Generator
 
-Simple app that allows users to generate image purely by AI. Image maker is powered by https://openai.com/dall-e-2/ 
+Simple app that allows users to generate image purely by AI. Image maker is powered by [OpenAI](https://openai.com/dall-e-2/)
 
 ## Tech Stack
 

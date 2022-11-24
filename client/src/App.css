@@ -28,7 +28,7 @@ body {
   margin: 0px;
   display: flex;
   place-items: center;
-  /* min-width: 320px; */
+  min-width: 320px;
   min-height: 100vh;
   position: relative;
   min-height: 100vh;
@@ -85,12 +85,14 @@ button {
 form {
   margin-top: 1em;
 }
+
 textarea {
   border: none;
   padding: 1em;
   border-radius: 5px;
   resize: none;
   font-size: 1em;
+  width: 100%;
 }
 
 textarea:focus {
@@ -137,4 +139,22 @@ footer p {
 .gh-logo {
   width: 1.5em;
   height: auto;
+}
+
+@media screen and (min-width: 600px) {
+  #root {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #root {
+    width: 30%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
 }
